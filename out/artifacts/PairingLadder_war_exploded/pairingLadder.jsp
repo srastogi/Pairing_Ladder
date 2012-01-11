@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/createPairingLadder.js"></script>
 
     <title>Pairing Ladder</title>
@@ -12,8 +12,8 @@
 
 <h1 align="center">Pairing Ladder</h1>
 
-<div id="teamMembers"><c:out value="${teamInfo.teamMembers}"></c:out></div>
-<div id="teamSize"><c:out value="${teamInfo.teamSize}"></c:out></div>
+<%--<div id="teamMembers"><c:out value="${teamInfo.teamMembers}"></c:out></div>--%>
+<%--<div id="teamSize"><c:out value="${teamInfo.teamSize}"></c:out></div>--%>
 
 <c:forEach var="member" items="${teamInfo.teamMembers}">
     <c:out value="${member}"></c:out>

@@ -83,19 +83,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="createPairingLadder.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="createPairingLadder.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/js/createPairingLadder.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="22" selection-start="585" selection-end="585" vertical-scroll-proportion="0.44198895">
+                <state line="31" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.8259325">
                   <folding />
                 </state>
               </provider>
@@ -108,7 +99,7 @@
           <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/index.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="7" selection-start="722" selection-end="722" vertical-scroll-proportion="-14.375">
+                <state line="4" column="40" selection-start="121" selection-end="143" vertical-scroll-proportion="-2.5">
                   <folding />
                 </state>
               </provider>
@@ -117,7 +108,7 @@
           <file leaf-file-name="pairingLadder.jsp" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/pairingLadder.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.45086706">
+                <state line="15" column="24" selection-start="515" selection-end="515" vertical-scroll-proportion="0.433526">
                   <folding />
                 </state>
               </provider>
@@ -132,10 +123,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CreateLadderAction.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/web/CreateLadderAction.java">
+          <file leaf-file-name="CreateLadderController.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/web/CreateLadderController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+                <state line="22" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -162,14 +153,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/BeerSelect.java" />
         <option value="$PROJECT_DIR$/src/web/BeerSelect.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/model/PairLadder.java" />
         <option value="$PROJECT_DIR$/src/web/CreateLadder.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/pairingLadder.jsp" />
         <option value="$PROJECT_DIR$/web/js/createInformationPage.js" />
         <option value="$PROJECT_DIR$/src/model/TeamInfo.java" />
         <option value="$PROJECT_DIR$/web/js/createPairingLadder.js" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/pairingLadder.jsp" />
       </list>
     </option>
   </component>
@@ -608,13 +599,13 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292232" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29078948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22871573" sideWeight="0.33157894" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22871573" sideWeight="0.325" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33549783" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972583" sideWeight="0.79605263" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21789321" sideWeight="0.79605263" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20394737" sideWeight="0.9992464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -727,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="722" selection-end="722" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/TeamInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
@@ -741,23 +725,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/CreateLadderAction.java">
+    <entry file="file://$PROJECT_DIR$/src/web/CreateLadderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+        <state line="22" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/createPairingLadder.js">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="585" selection-end="585" vertical-scroll-proportion="0.44198895">
+        <state line="19" column="0" selection-start="602" selection-end="602" vertical-scroll-proportion="0.5974843">
           <folding />
         </state>
       </provider>
@@ -771,9 +755,23 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/createPairingLadder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.8259325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="40" selection-start="121" selection-end="143" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/pairingLadder.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.45086706">
+        <state line="15" column="24" selection-start="515" selection-end="515" vertical-scroll-proportion="0.433526">
           <folding />
         </state>
       </provider>

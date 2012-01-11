@@ -2,14 +2,14 @@
 
 <html>
 <head>
-    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/createInformationPage.js"></script>
 
     <title>Pairing Ladder</title>
 </head>
 <body>
 <h1 align="center">Pairing Ladder Information Page</h1>
-
+what the hell is going on!
 <form id="form" method="POST" action="CreateLadder.do">
     Number of people on the team:
     <input type="text" id="teamSize" name="teamSize">
