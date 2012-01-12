@@ -14,9 +14,13 @@ function createPairingLadder() {
             clonedColumn.removeClass("emptyColumnToBeCloned");
             clonedColumn.attr("id", createId((rowNumber), columnNumber));
             clonedRow.append(clonedColumn);
-            clonedColumn.append(0);
+            if(rowNumber == columnNumber){
+                clonedColumn.append("X");
+            }else{
+                clonedColumn.append(0);
+            }
         }
-        totalColumns = totalColumns - rowNumber;
+        totalColumns = ladderSize - rowNumber;
     }
     populateLadderWithNames(ladderSize);
 }
@@ -34,7 +38,7 @@ function populateLadderWithNames(ladderSize) {
             }
         }
     });
-    $("#00").html("Names");
+    $("#00").html("NAMES");
 }
 
 function setHtmlForElementWithGivenId(id, teamMembers, idLocator) {

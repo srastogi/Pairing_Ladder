@@ -1,4 +1,3 @@
-
 function createPairingLadder() {
     var pairingLadder = $(".pairingLadder");
     var ladderSize = parseInt($("#teamSize").text());
@@ -15,14 +14,18 @@ function createPairingLadder() {
             clonedColumn.removeClass("emptyColumnToBeCloned");
             clonedColumn.attr("id", createId((rowNumber), columnNumber));
             clonedRow.append(clonedColumn);
-            clonedColumn.append(0);
+            if(rowNumber == columnNumber){
+                clonedColumn.append("X");
+            }else{
+                clonedColumn.append(0);
+            }
         }
-        totalColumns = totalColumns - rowNumber;
+        totalColumns = ladderSize - rowNumber;
     }
-    populateTheLadder(ladderSize);
+    populateLadderWithNames(ladderSize);
 }
 
-function populateTheLadder(ladderSize) {
+function populateLadderWithNames(ladderSize) {
     var teamMembers = $('#teamMembers').text().split(",");
     $.each(['rows', 'columns'], function(index, value) {
         for (var idLocator = 1; idLocator <= (ladderSize); idLocator++) {
@@ -35,7 +38,7 @@ function populateTheLadder(ladderSize) {
             }
         }
     });
-      $("#00").html("Names");
+    $("#00").html("NAMES");
 }
 
 function setHtmlForElementWithGivenId(id, teamMembers, idLocator) {
@@ -43,7 +46,7 @@ function setHtmlForElementWithGivenId(id, teamMembers, idLocator) {
     $("#" + id).html(teamMembers[idLocator].replace(regex, '').trim());
 }
 
-function createId(firstHalf, secondHalf){
+function createId(firstHalf, secondHalf) {
     return firstHalf.toString() + secondHalf.toString();
 }
 
