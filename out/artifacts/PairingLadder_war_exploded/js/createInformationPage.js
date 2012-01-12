@@ -1,6 +1,3 @@
-$(document).ready(function() {
-    $("#formSubmitButton").hide();
-});
 
 function generateNameBlock() {
     var nameBlock = $(".nameBlock");

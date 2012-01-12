@@ -6,7 +6,6 @@ import java.util.List;
 public class TeamInfo {
 
    private String teamSize;
-
    private List teamMembers = new ArrayList();
 
    public TeamInfo(String teamSize, List<String> teamMembers) {
@@ -14,6 +13,14 @@ public class TeamInfo {
       for (String teamMember : teamMembers) {
          this.teamMembers.add(teamMember);
       }
+   }
+
+   public String getTeamSize() {
+      return teamSize;
+   }
+
+   public List getTeamMembers() {
+      return teamMembers;
    }
 
    public String toString() {
@@ -24,4 +31,5 @@ public class TeamInfo {
       }
       return returnString;
    }
+
 }
