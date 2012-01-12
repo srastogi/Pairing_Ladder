@@ -1,4 +1,3 @@
-
 function createPairingLadder() {
     var pairingLadder = $(".pairingLadder");
     var ladderSize = parseInt($("#teamSize").text());
@@ -19,10 +18,10 @@ function createPairingLadder() {
         }
         totalColumns = totalColumns - rowNumber;
     }
-    populateTheLadder(ladderSize);
+    populateLadderWithNames(ladderSize);
 }
 
-function populateTheLadder(ladderSize) {
+function populateLadderWithNames(ladderSize) {
     var teamMembers = $('#teamMembers').text().split(",");
     $.each(['rows', 'columns'], function(index, value) {
         for (var idLocator = 1; idLocator <= (ladderSize); idLocator++) {
@@ -35,7 +34,7 @@ function populateTheLadder(ladderSize) {
             }
         }
     });
-      $("#00").html("Names");
+    $("#00").html("Names");
 }
 
 function setHtmlForElementWithGivenId(id, teamMembers, idLocator) {
@@ -43,7 +42,7 @@ function setHtmlForElementWithGivenId(id, teamMembers, idLocator) {
     $("#" + id).html(teamMembers[idLocator].replace(regex, '').trim());
 }
 
-function createId(firstHalf, secondHalf){
+function createId(firstHalf, secondHalf) {
     return firstHalf.toString() + secondHalf.toString();
 }
 

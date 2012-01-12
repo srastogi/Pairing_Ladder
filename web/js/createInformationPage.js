@@ -1,4 +1,3 @@
-
 function generateNameBlock() {
     var nameBlock = $(".nameBlock");
     nameBlock.empty();
