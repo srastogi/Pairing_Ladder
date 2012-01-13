@@ -7,13 +7,13 @@
          version="2.5">
 
     <servlet>
-        <servlet-name>CreateLadder</servlet-name>
-        <servlet-class>web.CreateLadderController</servlet-class>
+        <servlet-name>buildLadder</servlet-name>
+        <servlet-class>web.buildLadderController</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CreateLadder</servlet-name>
-        <url-pattern>/CreateLadder.do</url-pattern>
+        <servlet-name>buildLadder</servlet-name>
+        <url-pattern>/buildLadder.do</url-pattern>
     </servlet-mapping>
 
 </web-app>

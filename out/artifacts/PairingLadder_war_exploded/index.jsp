@@ -4,13 +4,13 @@
 <head>
     <link rel="stylesheet" href="css/pairingLadder.css" type="text/css"/>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="js/createInformationPage.js"></script>
+    <script type="text/javascript" src="js/informationPage.js"></script>
 
     <title>Pairing Ladder</title>
 </head>
 <body>
 <h1 align="center">Pairing Ladder Information Page</h1>
-<form id="form" method="POST" action="CreateLadder.do">
+<form id="form" method="POST" action="buildLadder.do">
     Number of people on the team:
     <input type="text" id="teamSize" name="teamSize">
     <br/>

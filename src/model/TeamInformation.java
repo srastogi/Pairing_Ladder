@@ -3,15 +3,15 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TeamInfo {
+public class TeamInformation {
 
    private String teamSize;
-   private List teamMembers = new ArrayList();
+   private List teamList = new ArrayList();
 
-   public TeamInfo(String teamSize, List<String> teamMembers) {
+   public TeamInformation(String teamSize, List<String> teamMembers) {
       this.teamSize = teamSize;
       for (String teamMember : teamMembers) {
-         this.teamMembers.add(teamMember);
+         this.teamList.add(teamMember);
       }
    }
 
@@ -19,13 +19,13 @@ public class TeamInfo {
       return teamSize;
    }
 
-   public List getTeamMembers() {
-      return teamMembers;
+   public List getTeamList() {
+      return teamList;
    }
 
    public String toString() {
       String returnString = "TeamSize = " + teamSize + "and team members are: ";
-      for (Object teamMember : teamMembers) {
+      for (Object teamMember : teamList) {
          returnString += teamMember;
          returnString += " ";
       }

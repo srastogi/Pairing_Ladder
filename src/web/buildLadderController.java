@@ -1,13 +1,13 @@
 package web;
 
-import model.TeamInfo;
+import model.TeamInformation;
 
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateLadderController extends javax.servlet.http.HttpServlet {
+public class buildLadderController extends javax.servlet.http.HttpServlet {
    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
       response.setContentType("text/html");
       String teamSize = request.getParameter("teamSize");
@@ -15,8 +15,8 @@ public class CreateLadderController extends javax.servlet.http.HttpServlet {
       for (int i = 1; i <= Integer.parseInt(teamSize); i++) {
          memberList.add(request.getParameter("team_member_" + i));
       }
-      TeamInfo teamInfo = new TeamInfo(teamSize, memberList);
-      request.setAttribute("teamInfo", teamInfo);
+      TeamInformation teamInformation = new TeamInformation(teamSize, memberList);
+      request.setAttribute("teamInformation", teamInformation);
       RequestDispatcher view = request.getRequestDispatcher("pairingLadder.jsp");
       view.forward(request, response);
    }
