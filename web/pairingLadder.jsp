@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="css/pairingLadder.css" type="text/css"/>
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/pairingLadder.js"></script>
+    <script type="text/javascript" src="js/informationPage.js"></script>
 
     <title>Pairing Ladder</title>
 </head>
-<body onload="createPairingLadder()">
+<body>
 
 <h1 align="center">Pairing Ladder</h1>
 
@@ -28,6 +29,17 @@
     <button id="addButton" type="button" onclick="addToLadder()">Add to team</button>
     &nbsp;
     <button id="deleteButton" type="button" onclick="deleteFromLadder()">Delete from team</button>
+</div>
+
+<div id="addDeleteBlock" class="noDisplay">
+    Number of people to add:
+    <input type="text" id="addDeleteSize" name="addDeleteSize">
+    <br/>
+    <button type="button" id="addDeleteSizeSubmit" onclick="generateNameBlock()"> Submit</button>
+    <br/>
+
+    <div class="nameBlock"></div>
+    <button id="formSubmitButton" class="noDisplay" type="button">Submit</button>
 </div>
 
 </body>

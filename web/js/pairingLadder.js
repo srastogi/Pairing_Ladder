@@ -1,82 +1,88 @@
-function createPairingLadder() {
-    var pairingLadder = $('.pairingLadder');
-    var ladderSize = parseInt($('#teamSize').text());
-    var emptyRowToBeCloned = pairingLadder.find('.emptyRowToBeCloned');
-    var emptyCellToBeCloned = pairingLadder.find('.emptyCellToBeCloned');
-    var totalColumns = ladderSize;
-    pairingLadder.find('.clonedElement').remove();
-    for (var rowNumber = 0; rowNumber < ladderSize; rowNumber++) {
-        var clonedRow = cloneRow(emptyRowToBeCloned, pairingLadder);
+var PairingLadder = function() {
+    this.pairingLadderElement = $('.pairingLadder');
+    this.ladderSize = parseInt($('#teamSize').text());
+    this.emptyRowToBeCloned = this.pairingLadderElement.find('.emptyRowToBeCloned');
+    this.emptyCellToBeCloned = this.pairingLadderElement.find('.emptyCellToBeCloned');
+};
+
+
+PairingLadder.prototype.createPairingLadder = function() {
+    var totalColumns = this.ladderSize;
+    this.pairingLadderElement.find('.clonedElement').remove();
+    for (var rowNumber = 0; rowNumber < this.ladderSize; rowNumber++) {
+        var clonedRow = this.cloneRow();
         for (var columnNumber = 0; columnNumber < totalColumns; columnNumber++) {
-            cloneCell(emptyCellToBeCloned, rowNumber, columnNumber, clonedRow);
+            this.cloneCell(rowNumber, columnNumber, clonedRow);
         }
         totalColumns--;
     }
-    addNames(ladderSize);
+    this.addNames();
 }
 
-function cloneRow(emptyRowToBeCloned, pairingLadder) {
-    var clonedRow = cloneEmptyElement(emptyRowToBeCloned);
+PairingLadder.prototype.cloneRow = function () {
+    var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
     clonedRow.removeClass('emptyRowToBeCloned');
-    pairingLadder.append(clonedRow);
+    this.pairingLadderElement.append(clonedRow);
     return clonedRow;
 }
 
-function cloneCell(emptyCellToBeCloned, rowNumber, columnNumber, clonedRow) {
-    var clonedCell = cloneEmptyElement(emptyCellToBeCloned);
+PairingLadder.prototype.cloneCell = function(rowNumber, columnNumber, clonedRow) {
+    var ladderInstance = this;
+    var clonedCell = this.cloneEmptyElement(this.emptyCellToBeCloned);
     clonedCell.removeClass('emptyCellToBeCloned');
-    clonedCell.attr('id', createId((rowNumber), columnNumber));
+    clonedCell.attr('id', this.createId((rowNumber), columnNumber));
     clonedCell.bind('mousedown', function(event) {
-        checkForLeftAndRightClick(event, $(this).attr('id'));
+        ladderInstance.checkForLeftAndRightClick(event, this);
     });
     clonedRow.append(clonedCell);
     clonedCell.append(0);
 }
 
-function addNames(ladderSize) {
+PairingLadder.prototype.addNames = function() {
     var teamMembers = $('#teamMembers').text().split(',');
-    for (var idLocator = 0; idLocator < (ladderSize - 1); idLocator++) {
+    for (var idLocator = 0; idLocator < (this.ladderSize - 1); idLocator++) {
         if (idLocator == 0) {
-            var id = createId((ladderSize - 1), 0);
-            setHtmlForElementWithGivenId(id, teamMembers[0]);
-            unbindMouseDownEventForGivenId(id);
-            var id = createId(0, (ladderSize - 1));
-            setHtmlForElementWithGivenId(id, teamMembers[(ladderSize - 1)]);
-            unbindMouseDownEventForGivenId(id);
+            var id = this.createId((this.ladderSize - 1), 0);
+            this.setHtmlForElementWithGivenId(id, teamMembers[0]);
+            this.unbindMouseDownEventForGivenId(id);
+            var id = this.createId(0, (this.ladderSize - 1));
+            this.setHtmlForElementWithGivenId(id, teamMembers[(this.ladderSize - 1)]);
+            this.unbindMouseDownEventForGivenId(id);
         } else {
-            var id = createId(ladderSize - (idLocator + 1), idLocator);
-            setHtmlForElementWithGivenId(id, teamMembers[idLocator]);
-            unbindMouseDownEventForGivenId(id);
+            var id = this.createId(this.ladderSize - (idLocator + 1), idLocator);
+            this.setHtmlForElementWithGivenId(id, teamMembers[idLocator]);
+            this.unbindMouseDownEventForGivenId(id);
         }
     }
 }
 
-function checkForLeftAndRightClick(event, id) {
+PairingLadder.prototype.checkForLeftAndRightClick = function(event, currentSelectedObject) {
+    var id = $(currentSelectedObject).attr('id');
     switch (event.which) {
         case 1:
-            incrementValue(id);
+            this.incrementValue(id);
             break;
         case 2:
-            decrementValue(id);
-            $(this).bind("contextmenu", function(e) {
+            this.decrementValue(id);
+            $(currentSelectedObject).bind("contextmenu", function(e) {
                 return false;
             })
             break;
         default:
-            decrementValue(id);
-            $(this).bind("contextmenu", function(e) {
+            this.decrementValue(id);
+            $(currentSelectedObject).bind("contextmenu", function(e) {
                 return false;
             })
     }
 }
 
-function incrementValue(id) {
+PairingLadder.prototype.incrementValue = function(id) {
     var value = parseInt($('#' + id).html());
     value++;
     $('#' + id).html(value);
 }
 
-function decrementValue(id) {
+PairingLadder.prototype.decrementValue = function(id) {
     if (parseInt($('#' + id).html()) <= 0) {
         alert("Value can't be less than 0!");
     } else {
@@ -87,31 +93,53 @@ function decrementValue(id) {
     }
 }
 
-function unbindMouseDownEventForGivenId(id) {
+PairingLadder.prototype.unbindMouseDownEventForGivenId = function(id) {
     $('#' + id).unbind('mousedown');
 }
 
-function setHtmlForElementWithGivenId(id, elementHtml) {
+PairingLadder.prototype.setHtmlForElementWithGivenId = function(id, elementHtml) {
     var regex = /\[|\]/;
     $('#' + id).html(elementHtml.replace(regex, '').trim());
 }
 
-function createId(firstHalf, secondHalf) {
+PairingLadder.prototype.createId = function(firstHalf, secondHalf) {
     return firstHalf.toString() + secondHalf.toString();
 }
 
-function cloneEmptyElement(emptyElementToBeCloned) {
+PairingLadder.prototype.cloneEmptyElement = function(emptyElementToBeCloned) {
     var clonedElement = $(emptyElementToBeCloned).clone();
     clonedElement.removeClass('noDisplay');
     clonedElement.addClass('clonedElement');
     return $(clonedElement);
 }
 
-function addToLadder() {
+PairingLadder.prototype.addToLadder = function() {
+    resetAddDeleteBlock()
+    var addDeleteBlock = $('#addDeleteBlock');
+    addDeleteBlock.show();
+    $('#formSubmitButton').bind('click', function() {
+        addDeleteBlock.hide();
+    });
+}
+
+PairingLadder.prototype.deleteFromLadder = function() {
+    resetAddDeleteBlock()
+
+    $('#formSubmitButton').bind('click', function() {
+        addDeleteBlock.hide();
+    });
+}
+
+
+PairingLadder.prototype.resetAddDeleteBlock = function() {
+    var nameBlock = $(".nameBlock");
+    nameBlock.empty();
+    $("#formSubmitButton").hide();
+    $('#addDeleteSize').val('');
 
 }
 
-function deleteFromLadder() {
-
-}
-
+$(document).ready(function() {
+    pairingLadder = new PairingLadder();
+    pairingLadder.createPairingLadder();
+});

@@ -15,10 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bebce003-7300-450f-a3c4-0d02cf50d3ac" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/pairingLadder.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/buildLadder.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web/buildLadderController.java" afterPath="$PROJECT_DIR$/src/web/BuildLadderController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/pairingLadder.css" afterPath="$PROJECT_DIR$/web/css/pairingLadder.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/informationPage.js" afterPath="$PROJECT_DIR$/web/js/informationPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/pairingLadder.js" afterPath="$PROJECT_DIR$/web/js/pairingLadder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/pairingLadder.jsp" afterPath="$PROJECT_DIR$/web/pairingLadder.jsp" />
     </list>
     <ignored path="PairingLadder.iws" />
@@ -77,26 +78,52 @@
     <favorites_list name="PairingLadder" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pairingLadder.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pairingLadder.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="37" selection-start="922" selection-end="922" vertical-scroll-proportion="-16.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pairingLadder.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/pairingLadder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="54" selection-start="785" selection-end="785" vertical-scroll-proportion="0.44194108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="informationPage.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/js/informationPage.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="46" selection-start="117" selection-end="159" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/index.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="14" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="-8.75">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pairingLadder.js" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/js/pairingLadder.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="60" column="12" selection-start="2534" selection-end="2534" vertical-scroll-proportion="0.47026023">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="pairingLadder.jsp" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/web/pairingLadder.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="5" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35019454">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -113,21 +140,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/BeerSelect.java" />
-        <option value="$PROJECT_DIR$/src/web/BeerSelect.java" />
-        <option value="$PROJECT_DIR$/src/model/PairLadder.java" />
-        <option value="$PROJECT_DIR$/src/web/CreateLadder.java" />
         <option value="$PROJECT_DIR$/src/model/TeamInfo.java" />
         <option value="$PROJECT_DIR$/web/js/createInformationPage.js" />
         <option value="$PROJECT_DIR$/web/js/createPairingLadder.js" />
         <option value="$PROJECT_DIR$/src/model/TeamInformation.java" />
         <option value="$PROJECT_DIR$/src/web/CreateLadderController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/js/buildLadder.js" />
+        <option value="$PROJECT_DIR$/web/css/pairingLadder.css" />
+        <option value="$PROJECT_DIR$/web/RemoveFromPairingLadder.jsp" />
+        <option value="$PROJECT_DIR$/web/AddToPairingLadder.jsp" />
+        <option value="$PROJECT_DIR$/src/web/RemoveFromLadderController.java" />
+        <option value="$PROJECT_DIR$/src/web/AddToLadderController.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/js/informationPage.js" />
-        <option value="$PROJECT_DIR$/web/js/buildLadder.js" />
         <option value="$PROJECT_DIR$/web/pairingLadder.jsp" />
-        <option value="$PROJECT_DIR$/web/css/pairingLadder.css" />
         <option value="$PROJECT_DIR$/web/js/pairingLadder.js" />
       </list>
     </option>
@@ -187,6 +214,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,21 +341,19 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Favorites" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="129" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="138" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="138" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="138" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="142" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="937" />
@@ -342,8 +369,8 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -353,7 +380,12 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="web" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -592,7 +624,7 @@
     <frame x="4" y="22" width="1436" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16842106" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13552631" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963924" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -607,7 +639,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33549783" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21789321" sideWeight="0.7973684" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21356422" sideWeight="0.7973684" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20263158" sideWeight="0.9992464" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -719,66 +751,60 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="-12.954545">
-          <folding />
-        </state>
+        <state line="19" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="-12.954545" />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="462" selection-end="462" vertical-scroll-proportion="0.3254973">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/buildLadderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.4787234">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/TeamInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="148" selection-end="148" vertical-scroll-proportion="0.18197574">
-          <folding />
-        </state>
+        <state line="8" column="20" selection-start="148" selection-end="148" vertical-scroll-proportion="0.18197574" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/pairingLadder.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="144" selection-end="144" vertical-scroll-proportion="0.28596187">
+        <state line="11" column="13" selection-start="144" selection-end="144" vertical-scroll-proportion="0.28596187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/BuildLadderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/informationPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="392" selection-end="392" vertical-scroll-proportion="0.25996533">
+        <state line="3" column="46" selection-start="117" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pairingLadder.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="37" selection-start="922" selection-end="922" vertical-scroll-proportion="-16.25">
+        <state line="12" column="5" selection-start="482" selection-end="482" vertical-scroll-proportion="0.35019454">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/pairingLadder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="785" selection-end="785" vertical-scroll-proportion="0.44194108">
+        <state line="60" column="12" selection-start="2534" selection-end="2534" vertical-scroll-proportion="0.47026023">
           <folding />
         </state>
       </provider>
