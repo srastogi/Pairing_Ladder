@@ -1,16 +1,36 @@
+$(document).ready(function() {
+    pairingLadder = new PairingLadder();
+    pairingLadder.createPairingLadder();
+
+    $('#editButton').bind('click', function() {
+        pairingLadder.resetAddDeleteBlock();
+    });
+
+    $('#addButton').bind('click', function() {
+        pairingLadder.addToLadder();
+    });
+
+    $('#deleteButton').bind('click', function() {
+        pairingLadder.deleteFromLadder();
+    });
+});
+
+
 var PairingLadder = function() {
     this.pairingLadderElement = $('.pairingLadder');
     this.ladderSize = parseInt($('#teamSize').text());
     this.emptyRowToBeCloned = this.pairingLadderElement.find('.emptyRowToBeCloned');
     this.emptyCellToBeCloned = this.pairingLadderElement.find('.emptyCellToBeCloned');
+    this.addDeleteBlock = $('#addDeleteBlock');
+    this.nameBlock = $(".nameBlock");
+    this.addDeleteSizeElement = $('#addDeleteSize');
 };
-
 
 PairingLadder.prototype.createPairingLadder = function() {
     var totalColumns = this.ladderSize;
     this.pairingLadderElement.find('.clonedElement').remove();
     for (var rowNumber = 0; rowNumber < this.ladderSize; rowNumber++) {
-        var clonedRow = this.cloneRow();
+        var clonedRow = this.cloneRow("append");
         for (var columnNumber = 0; columnNumber < totalColumns; columnNumber++) {
             this.cloneCell(rowNumber, columnNumber, clonedRow);
         }
@@ -19,11 +39,20 @@ PairingLadder.prototype.createPairingLadder = function() {
     this.addNames();
 }
 
-PairingLadder.prototype.cloneRow = function () {
-    var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
-    clonedRow.removeClass('emptyRowToBeCloned');
-    this.pairingLadderElement.append(clonedRow);
-    return clonedRow;
+PairingLadder.prototype.cloneRow = function (position) {
+    if (position == "append") {
+        var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
+        clonedRow.removeClass('emptyRowToBeCloned');
+        this.pairingLadderElement.append(clonedRow);
+        return clonedRow;
+    }
+    else {
+        var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
+        clonedRow.removeClass('emptyRowToBeCloned');
+        this.pairingLadderElement.prepend(clonedRow);
+        return clonedRow;
+    }
+
 }
 
 PairingLadder.prototype.cloneCell = function(rowNumber, columnNumber, clonedRow) {
@@ -66,13 +95,13 @@ PairingLadder.prototype.checkForLeftAndRightClick = function(event, currentSelec
             this.decrementValue(id);
             $(currentSelectedObject).bind("contextmenu", function(e) {
                 return false;
-            })
+            });
             break;
         default:
             this.decrementValue(id);
             $(currentSelectedObject).bind("contextmenu", function(e) {
                 return false;
-            })
+            });
     }
 }
 
@@ -114,32 +143,34 @@ PairingLadder.prototype.cloneEmptyElement = function(emptyElementToBeCloned) {
 }
 
 PairingLadder.prototype.addToLadder = function() {
-    resetAddDeleteBlock()
-    var addDeleteBlock = $('#addDeleteBlock');
-    addDeleteBlock.show();
-    $('#formSubmitButton').bind('click', function() {
-        addDeleteBlock.hide();
-    });
+    var addDeleteSize = parseInt(this.addDeleteSizeElement.val());
+    var oldLadderSize = this.ladderSize;
+    var nameId = 1;
+    this.ladderSize = this.ladderSize + addDeleteSize;
+    for (oldLadderSize; oldLadderSize < this.ladderSize; oldLadderSize++) {
+        var clonedRow = this.cloneRow("prepend");
+        for (var columnNumber = 0; columnNumber <= oldLadderSize; columnNumber++) {
+            this.cloneCell(oldLadderSize, columnNumber, clonedRow);
+
+        }
+        var cellId = this.createId(oldLadderSize, oldLadderSize);
+        var textId = "name" + (nameId).toString();
+        $('#' + cellId).html($('#' + textId).val());
+        this.unbindMouseDownEventForGivenId(cellId);
+        nameId++;
+    }
+    this.addDeleteBlock.hide();
 }
 
 PairingLadder.prototype.deleteFromLadder = function() {
-    resetAddDeleteBlock()
 
-    $('#formSubmitButton').bind('click', function() {
-        addDeleteBlock.hide();
-    });
+
 }
-
 
 PairingLadder.prototype.resetAddDeleteBlock = function() {
-    var nameBlock = $(".nameBlock");
-    nameBlock.empty();
-    $("#formSubmitButton").hide();
-    $('#addDeleteSize').val('');
-
+    this.addDeleteBlock.show();
+    this.nameBlock.empty();
+    $('.addDeleteButtons').hide();
+    this.addDeleteSizeElement.val('');
 }
 
-$(document).ready(function() {
-    pairingLadder = new PairingLadder();
-    pairingLadder.createPairingLadder();
-});

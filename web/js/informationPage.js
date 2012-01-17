@@ -1,13 +1,15 @@
 function generateNameBlock() {
-    var teamSize = 0; var addDeleteSize = 0;
+    var teamSize = 0;
+    var addDeleteSize = 0;
     teamSize = $('#teamSize').val();
     addDeleteSize = $('#addDeleteSize').val();
-    if(teamSize != 0){
+    if (teamSize != 0) {
         appendHTML(teamSize);
-    }else{
+        $('#formSubmitButton').show();
+    } else {
         appendHTML(addDeleteSize);
+        $('.addDeleteButtons').show();
     }
-    $("#formSubmitButton").show();
 }
 
 function appendHTML(size) {
@@ -15,6 +17,6 @@ function appendHTML(size) {
     nameBlock.empty();
     for (var number = 1; number <= size; number++) {
         nameBlock.append("<br/>Name of team member " + number + ": <br/>" +
-            "<input type=\"text\" name=\"team_member_" + number + "\"><br/><br/>");
+            "<input type=\"text\" name=\"team_member_" + number + "\" id=\"name" + number + "\"/><br/><br/>");
     }
 }
