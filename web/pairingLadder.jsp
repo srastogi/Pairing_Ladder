@@ -30,7 +30,7 @@
 </div>
 
 <div id="addDeleteBlock" class="noDisplay">
-    Number of people to add/delete:
+    Number of people to add / delete:
     <input type="text" id="addDeleteSize" name="addDeleteSize">
     <br/>
     <button type="button" id="addDeleteSizeSubmit" onclick="generateNameBlock()"> Submit</button>

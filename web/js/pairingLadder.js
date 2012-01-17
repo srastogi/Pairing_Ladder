@@ -30,7 +30,7 @@ PairingLadder.prototype.createPairingLadder = function() {
     var totalColumns = this.ladderSize;
     this.pairingLadderElement.find('.clonedElement').remove();
     for (var rowNumber = 0; rowNumber < this.ladderSize; rowNumber++) {
-        var clonedRow = this.cloneRow("append");
+        var clonedRow = this.cloneRow("append", rowNumber);
         for (var columnNumber = 0; columnNumber < totalColumns; columnNumber++) {
             this.cloneCell(rowNumber, columnNumber, clonedRow);
         }
@@ -39,10 +39,11 @@ PairingLadder.prototype.createPairingLadder = function() {
     this.addNames();
 }
 
-PairingLadder.prototype.cloneRow = function (position) {
+PairingLadder.prototype.cloneRow = function (position, rowNumber) {
     if (position == "append") {
         var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
         clonedRow.removeClass('emptyRowToBeCloned');
+        clonedRow.attr('id', rowNumber.toString());
         this.pairingLadderElement.append(clonedRow);
         return clonedRow;
     }
@@ -163,8 +164,23 @@ PairingLadder.prototype.addToLadder = function() {
 }
 
 PairingLadder.prototype.deleteFromLadder = function() {
-
-
+    var addDeleteSize = parseInt(this.addDeleteSizeElement.val());
+    for (var num = 1; num <= addDeleteSize; num++) {
+        var value = $('#name' + num.toString()).val();
+        var id = parseInt($("td:contains('" + value + "')").attr('id'));
+        var row = id / 10;
+        if (row < 1) {
+            row = 0
+        } else(row = Math.floor(row));
+        var col = id % 10;
+        $('#' + row.toString()).remove();
+        for (var rowNumber = 0; rowNumber < this.ladderSize; rowNumber++) {
+            var idForColumns = '#' + rowNumber.toString() + col.toString();
+            $(idForColumns).remove();
+        }
+    }
+    this.addDeleteBlock.hide();
+    this.ladderSize = this.ladderSize - addDeleteSize;
 }
 
 PairingLadder.prototype.resetAddDeleteBlock = function() {
