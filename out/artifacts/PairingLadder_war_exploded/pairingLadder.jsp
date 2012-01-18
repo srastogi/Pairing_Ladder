@@ -30,17 +30,18 @@
 </div>
 
 <div id="addDeleteBlock" class="noDisplay">
-    Number of people to add / delete:
+    Number of people to add/delete: &nbsp;
     <input type="text" id="addDeleteSize" name="addDeleteSize">
     <br/>
     <button type="button" id="addDeleteSizeSubmit" onclick="generateNameBlock()"> Submit</button>
     <br/>
 
     <div class="nameBlock"></div>
+    
     <div class="addDeleteButtons">
-        <button id="addButton" type="button">Add to team</button>
+        <button id="addButton" type="button">Add to ladder</button>
         &nbsp;
-        <button id="deleteButton" type="button">Delete from team</button>
+        <button id="deleteButton" type="button">Delete from ladder</button>
     </div>
 </div>
 

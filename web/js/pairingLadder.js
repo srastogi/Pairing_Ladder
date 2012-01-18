@@ -50,6 +50,7 @@ PairingLadder.prototype.cloneRow = function (position, rowNumber) {
     else {
         var clonedRow = this.cloneEmptyElement(this.emptyRowToBeCloned);
         clonedRow.removeClass('emptyRowToBeCloned');
+        clonedRow.attr('id', rowNumber.toString());
         this.pairingLadderElement.prepend(clonedRow);
         return clonedRow;
     }
@@ -149,7 +150,7 @@ PairingLadder.prototype.addToLadder = function() {
     var nameId = 1;
     this.ladderSize = this.ladderSize + addDeleteSize;
     for (oldLadderSize; oldLadderSize < this.ladderSize; oldLadderSize++) {
-        var clonedRow = this.cloneRow("prepend");
+        var clonedRow = this.cloneRow("prepend", oldLadderSize);
         for (var columnNumber = 0; columnNumber <= oldLadderSize; columnNumber++) {
             this.cloneCell(oldLadderSize, columnNumber, clonedRow);
 
@@ -160,6 +161,7 @@ PairingLadder.prototype.addToLadder = function() {
         this.unbindMouseDownEventForGivenId(cellId);
         nameId++;
     }
+    this.refreshIds();
     this.addDeleteBlock.hide();
 }
 
@@ -179,6 +181,7 @@ PairingLadder.prototype.deleteFromLadder = function() {
             $(idForColumns).remove();
         }
     }
+    this.refreshIds();
     this.addDeleteBlock.hide();
     this.ladderSize = this.ladderSize - addDeleteSize;
 }
@@ -190,3 +193,17 @@ PairingLadder.prototype.resetAddDeleteBlock = function() {
     this.addDeleteSizeElement.val('');
 }
 
+PairingLadder.prototype.refreshIds = function() {
+    var ladderInstance = this;
+    $('.pairingLadder tr').each(function(rowNumber) {
+        if ($(this).attr('id') != undefined) {
+            $(this).attr('id', rowNumber);
+        }
+        $(this).find('td').each(function(columnNumber) {
+            if ($(this).attr('id') != undefined) {
+                var id = ladderInstance.createId(rowNumber, columnNumber);
+                $(this).attr('id', id);
+            }
+        });
+    });
+}
