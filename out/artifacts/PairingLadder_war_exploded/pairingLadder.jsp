@@ -33,7 +33,7 @@
     Number of people to add/delete: &nbsp;
     <input type="text" id="addDeleteSize" name="addDeleteSize">
     <br/>
-    <button type="button" id="addDeleteSizeSubmit" onclick="generateNameBlock()"> Submit</button>
+    <button type="button" id="addDeleteSizeSubmit"> Submit</button>
     <br/>
 
     <div class="nameBlock"></div>
