@@ -17,6 +17,9 @@
 <div class="noDisplay" id="teamMembers"><c:out value="${teamInformation.teamList}"></c:out></div>
 <div class="noDisplay" id="teamSize"><c:out value="${teamInformation.teamSize}"></c:out></div>
 
+<%-- Just to confirm is<method_name> works --%>
+<div class="noDisplay" id="teamCreated"><c:out value="${teamInformation.teamCreated}"></c:out></div>
+
 <table class="pairingLadder" class="tableStyle" align="center">
     <tr class="emptyRowToBeCloned noDisplay">
         <td class="emptyCellToBeCloned noDisplay cellStyle"></td>

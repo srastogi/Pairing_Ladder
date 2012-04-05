@@ -23,6 +23,11 @@ public class TeamInformation {
       return teamList;
    }
 
+   // Use is<method_name> to get boolean values in JSP using expression language
+   public boolean isTeamCreated(){
+      return true;
+   }
+
    public String toString() {
       String returnString = "TeamSize = " + teamSize + "and team members are: ";
       for (Object teamMember : teamList) {
