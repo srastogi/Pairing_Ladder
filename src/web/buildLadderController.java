@@ -3,12 +3,15 @@ package web;
 import model.TeamInformation;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BuildLadderController extends javax.servlet.http.HttpServlet {
-   protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.setContentType("text/html");
       String teamSize = request.getParameter("teamSize");
       List memberList = new ArrayList();
@@ -21,7 +24,7 @@ public class BuildLadderController extends javax.servlet.http.HttpServlet {
       view.forward(request, response);
    }
 
-   protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
    }
 }
