@@ -54,7 +54,6 @@ PairingLadder.prototype.cloneRow = function (position, rowNumber) {
         this.pairingLadderElement.prepend(clonedRow);
         return clonedRow;
     }
-
 }
 
 PairingLadder.prototype.cloneCell = function(rowNumber, columnNumber, clonedRow) {
@@ -120,7 +119,6 @@ PairingLadder.prototype.decrementValue = function(id) {
         var value = parseInt($('#' + id).html());
         value--;
         $('#' + id).html(value);
-
     }
 }
 
