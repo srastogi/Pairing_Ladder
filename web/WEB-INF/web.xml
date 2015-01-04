@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>buildLadder</servlet-name>
-        <servlet-class>web.BuildLadderController</servlet-class>
+        <servlet-class>web.buildLadderController</servlet-class>
     </servlet>
 
     <servlet-mapping>
